@@ -1,0 +1,9 @@
+<%- include('layout/header'); -%>
+<% if (!user) { %>
+	<p>Welcome!</p>
+	<p>Please <a href="/login">log in</a>.</p>
+<% } else { %>
+	<p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+	<a href="/logout">Log out</a>
+<% } %>
+<%- include('layout/footer'); -%>
